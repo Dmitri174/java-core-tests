@@ -48,7 +48,7 @@ public class MyApp {
         List<String> result4 = text.stream()
                 .sorted()
                 .distinct()
-                        .collect(Collectors.toList());
+                .collect(Collectors.toList());
         System.out.println(result4);
 
         System.out.println();
@@ -62,36 +62,21 @@ public class MyApp {
 
         Queue<String> queue = new PriorityQueue<>(name);
         queue.stream()
-                        .sorted(Comparator.comparing(String::length))
-                                .forEach(System.out::println);
+                .sorted(Comparator.comparing(String::length))
+                .forEach(System.out::println);
 
         System.out.println();
 
-       List<Integer> integers1 = new ArrayList<>();
-       integers1.add(22);
-       integers1.add(34);
-       integers1.add(50);
-       integers1.add(2);
-       integers1.add(22);
+        List<Integer> integers1 = new ArrayList<>();
+        integers1.add(22);
+        integers1.add(34);
+        integers1.add(50);
+        integers1.add(2);
+        integers1.add(22);
         integers1.stream()
-                .filter(integer -> Collections.frequency(integers1,integer) == 1)
+                .filter(integer -> Collections.frequency(integers1, integer) == 1)
                 .sorted()
-                .collect(Collectors.toList())
                 .forEach(System.out::println);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
